@@ -1,7 +1,11 @@
 {
   "name": "flavorful",
   "owner": {
-    "name": "Flavorful"
+    "name": "Flavorful",
+    "email": "hal@robotonwheels.com"
+  },
+  "metadata": {
+    "description": "Recipe management and cooking assistance. Find, save, and organize recipes with AI-powered search."
   },
   "plugins": [
     {
