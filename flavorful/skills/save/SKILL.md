@@ -20,9 +20,9 @@ Before proceeding, verify the cookbook is initialized:
 ## Usage
 
 ```
-/flavorful:save [url]
-/flavorful:save [url] --to ai-generated
-/flavorful:save [url] --tags quick,favorites
+/cookbook:save [url]
+/cookbook:save [url] --to ai-generated
+/cookbook:save [url] --tags quick,favorites
 ```
 
 ## Instructions
@@ -164,7 +164,7 @@ Options:
 If user pastes recipe text instead of URL:
 
 ```
-User: /flavorful:save
+User: /cookbook:save
 
 Here's my grandma's recipe:
 [recipe text]

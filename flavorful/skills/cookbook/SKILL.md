@@ -133,8 +133,8 @@ Recipe files: lowercase, hyphens, `.md` extension
 ## Error Handling
 
 If COOK.md doesn't exist:
-- Suggest running `/flavorful:start` to set up the cookbook
+- Suggest running `/cookbook:start` to set up the cookbook
 
 If a cookbook is empty:
 - Note that no recipes were found
-- Suggest `/flavorful:save [url]` to import some
+- Suggest `/cookbook:save [url]` to import some

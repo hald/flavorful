@@ -123,8 +123,8 @@ Standard kitchen setup
 Your cookbook is ready!
 
 What's next:
-- /flavorful:save [url] — import your first recipe
-- /flavorful:find [query] — search your recipes
+- /cookbook:save [url] — import your first recipe
+- /cookbook:find [query] — search your recipes
 
 Your profile is in COOK.md — edit anytime to update preferences.
 ```
@@ -146,8 +146,8 @@ Your cookbook is already set up.
 - Profile: COOK.md
 
 Commands:
-- /flavorful:find [query] — search recipes
-- /flavorful:save [url] — import a recipe
+- /cookbook:find [query] — search recipes
+- /cookbook:save [url] — import a recipe
 
 Want me to show your current profile or update anything?
 ```

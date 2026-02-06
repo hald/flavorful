@@ -14,7 +14,7 @@ Recipe management and cooking assistance for Claude Cowork.
 
 | Plugin | Description |
 |--------|-------------|
-| `flavorful` | Recipe management: find, save, organize recipes |
+| `cookbook` | Recipe management: find, save, organize recipes |
 
 ## What It Does
 
@@ -31,7 +31,7 @@ Recipe management and cooking assistance for Claude Cowork.
 | `start` | Initialize your cookbook structure |
 
 These work conversationally — just tell Claude what you need.
-Or use slash commands: `/flavorful:find`, `/flavorful:save`, etc.
+Or use slash commands: `/cookbook:find`, `/cookbook:save`, etc.
 
 ## Getting Started
 
@@ -41,7 +41,7 @@ Flavorful runs in [Cowork](https://support.claude.com/en/articles/13345190-getti
 
 1. Switch to the **Cowork** tab in Claude Desktop
 2. When prompted to select a folder, **choose or create your cookbook folder** (e.g., `~/cookbooks` or `~/Documents/my-recipes`)
-3. Run `/flavorful:start` to initialize your cookbook structure
+3. Run `/cookbook:start` to initialize your cookbook structure
 4. Start saving and finding recipes
 
 Cowork needs folder access to read and write your recipes. If you skip this step or select the wrong folder, the plugin won't be able to find or save your data.
@@ -49,16 +49,16 @@ Cowork needs folder access to read and write your recipes. If you skip this step
 ### Example Session
 
 ```
-You: /flavorful:start
+You: /cookbook:start
 
 Claude: [Creates cookbook structure in your folder]
         [Asks about dietary restrictions, equipment, etc.]
 
-You: /flavorful:save https://www.kingarthurbaking.com/recipes/pizza-crust-recipe
+You: /cookbook:save https://www.kingarthurbaking.com/recipes/pizza-crust-recipe
 
 Claude: [Imports recipe, saves to your cookbook]
 
-You: /flavorful:find pizza dough
+You: /cookbook:find pizza dough
 
 Claude: [Searches your recipes, returns matches]
 ```

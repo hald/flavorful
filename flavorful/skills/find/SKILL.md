@@ -20,7 +20,7 @@ Before proceeding, verify the cookbook is initialized:
 ## Usage
 
 ```
-/flavorful:find [query]
+/cookbook:find [query]
 ```
 
 ## Query Types
@@ -147,7 +147,7 @@ Format: **Title** / time · dietary flags · [tags]
 No recipes found matching "thai curry".
 
 Suggestions:
-- /flavorful:save [url] to import a recipe
+- /cookbook:save [url] to import a recipe
 - Try a broader search like "curry" or "asian"
 ```
 
@@ -156,7 +156,7 @@ Suggestions:
 ```
 Your cookbook is empty! Let's add some recipes.
 
-- /flavorful:save [url] — import from a website
+- /cookbook:save [url] — import from a website
 - Or tell me a recipe and I'll help you write it down
 ```
 
@@ -177,15 +177,15 @@ What sounds good?
 ## Examples
 
 ```
-User: /flavorful:find salmon
+User: /cookbook:find salmon
 → grep for "salmon|fish|seafood" across recipes
 
-User: /flavorful:find quick weeknight
+User: /cookbook:find quick weeknight
 → grep for "quick|weeknight" in tags AND time < 30 min
 
-User: /flavorful:find dairy-free pasta
+User: /cookbook:find dairy-free pasta
 → grep for "dairy-free" in dietary AND "pasta|noodle" in content
 
-User: /flavorful:find something japanese
+User: /cookbook:find something japanese
 → grep for "japanese" in tags OR "miso|soy|teriyaki" in content
 ```
