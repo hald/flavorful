@@ -1,0 +1,21 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "flavorful",
+  "version": "0.1.0",
+  "metadata": {
+    "description": "Recipe management and cooking assistance plugins."
+  },
+  "owner": {
+    "name": "Flavorful",
+    "url": "https://github.com/hald/flavorful"
+  },
+  "plugins": [
+    {
+      "name": "flavorful",
+      "description": "Recipe management and cooking assistance. Find, save, and organize recipes with AI-powered search.",
+      "version": "0.1.0",
+      "source": "./plugins/core",
+      "category": "productivity"
+    }
+  ]
+}
