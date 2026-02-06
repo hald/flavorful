@@ -3,17 +3,11 @@
   "owner": {
     "name": "Flavorful"
   },
-  "metadata": {
-    "description": "Recipe management and cooking assistance plugins.",
-    "version": "0.1.0"
-  },
   "plugins": [
     {
       "name": "flavorful",
-      "description": "Recipe management and cooking assistance. Find, save, and organize recipes with AI-powered search.",
-      "version": "0.1.0",
       "source": "./plugins/core",
-      "category": "productivity"
+      "description": "Recipe management and cooking assistance. Find, save, and organize recipes with AI-powered search."
     }
   ]
 }
