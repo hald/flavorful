@@ -1,13 +1,11 @@
 {
-  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "flavorful",
-  "version": "0.1.0",
-  "metadata": {
-    "description": "Recipe management and cooking assistance plugins."
-  },
   "owner": {
-    "name": "Flavorful",
-    "url": "https://github.com/hald/flavorful"
+    "name": "Flavorful"
+  },
+  "metadata": {
+    "description": "Recipe management and cooking assistance plugins.",
+    "version": "0.1.0"
   },
   "plugins": [
     {
