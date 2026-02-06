@@ -9,7 +9,7 @@
   },
   "plugins": [
     {
-      "name": "flavorful",
+      "name": "cookbook",
       "source": "./flavorful",
       "description": "Recipe management and cooking assistance. Find, save, and organize recipes with AI-powered search."
     }
