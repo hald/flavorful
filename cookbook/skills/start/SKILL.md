@@ -12,6 +12,7 @@ Initialize Flavorful and set up your cooking profile in the current folder.
 ### 1. Check What Exists
 
 Check the **current working directory** (the folder the user selected) for existing setup:
+- `CLAUDE.md` — project instructions
 - `COOK.md` — user profile
 - `LIBRARY.md` — cookbook registry
 - `cookbooks/` — recipe collections
@@ -22,6 +23,7 @@ If not already set up, create the structure in the current folder:
 
 ```
 [current folder]/
+├── CLAUDE.md
 ├── COOK.md
 ├── LIBRARY.md
 └── cookbooks/
@@ -31,7 +33,23 @@ If not already set up, create the structure in the current folder:
         └── COOKBOOK.md
 ```
 
-### 3. Create LIBRARY.md
+### 3. Create CLAUDE.md
+
+Create a `CLAUDE.md` file in the **current working directory root**:
+
+```markdown
+# Flavorful Cookbook
+
+This is a Flavorful cookbook folder. Your cookbook plugin skills have detailed instructions for working with these files — lean on them.
+
+## Structure
+
+- **COOK.md** — User profile (dietary restrictions, equipment, preferences). Read this first when helping with cooking tasks.
+- **LIBRARY.md** — Registry of cookbooks. Read this to discover what collections exist.
+- **cookbooks/** — Recipe collections. Each subfolder is a cookbook with recipe markdown files.
+```
+
+### 4. Create LIBRARY.md
 
 ```markdown
 # My Cookbooks
@@ -43,7 +61,7 @@ All my recipes — personal creations and web imports.
 Recipes created by AI. Move favorites to recipes.
 ```
 
-### 4. Create COOKBOOK.md Files
+### 5. Create COOKBOOK.md Files
 
 For `cookbooks/recipes/COOKBOOK.md`:
 ```markdown
@@ -59,7 +77,7 @@ For `cookbooks/ai-generated/COOKBOOK.md`:
 Recipes created by Claude. Move favorites to recipes.
 ```
 
-### 5. Gather User Context
+### 6. Gather User Context
 
 Ask the user a few quick questions to populate COOK.md:
 
@@ -75,7 +93,7 @@ Let me set up your cookbook. A few quick questions:
 
 Keep it conversational. If they say "none" or seem unsure, that's fine — the profile can be updated later.
 
-### 6. Create COOK.md
+### 7. Create COOK.md
 
 Based on their answers, create COOK.md:
 
@@ -117,7 +135,7 @@ Cooking profile — update as needed.
 Standard kitchen setup
 ```
 
-### 7. Confirm Setup
+### 8. Confirm Setup
 
 ```
 Your cookbook is ready!
