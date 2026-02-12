@@ -12,8 +12,9 @@ This skill teaches you to understand and work with Flavorful's recipe format.
 
 A simple, markdown-based format for cooking knowledge:
 
-- **User files** (COOK.md, LIBRARY.md) — prose and lists, easy to edit
+- **User files** (COOK.md) — prose and lists, easy to edit
 - **Recipe files** — minimal YAML frontmatter + markdown body
+- **Cookbook descriptions** (COOKBOOK.md per collection) — what each cookbook is for
 
 ## File Locations
 
@@ -22,10 +23,11 @@ Files live in the **user's selected folder** (the current working directory). St
 ```
 [user's folder]/
 ├── COOK.md               # User profile
-├── LIBRARY.md            # Cookbook registry
 └── cookbooks/
     ├── recipes/          # All user recipes
+    │   └── COOKBOOK.md    # Collection description
     └── ai-generated/     # Created by AI
+        └── COOKBOOK.md    # Collection description
 ```
 
 **Important:** Do NOT use hardcoded paths. Work with whatever folder the user has selected.
@@ -59,23 +61,11 @@ instant pot, cast iron, dutch oven, food processor
 
 **How to parse:** Look for the Dietary section. Extract restrictions, preferences, and items to avoid. Use these to filter recipe suggestions.
 
-## Reading LIBRARY.md
+## Discovering Cookbooks
 
-This tells you which cookbooks exist:
+Each cookbook is a subfolder under `cookbooks/` with a `COOKBOOK.md` describing the collection.
 
-```markdown
-# My Cookbooks
-
-## recipes
-All my recipes — personal creations and web imports.
-
-## ai-generated
-Recipes created by AI. Move favorites to recipes.
-```
-
-**How to parse:** Each `## heading` is a cookbook name. The path is `cookbooks/{name}/`.
-
-**Important:** Always read LIBRARY.md to discover which cookbooks exist. Don't hardcode cookbook names — users may create custom cookbooks or import shared ones.
+**How to discover:** Scan `cookbooks/*/COOKBOOK.md` to find all available cookbooks. Don't hardcode cookbook names — users may create custom cookbooks or import shared ones.
 
 ## Recipe Format
 
@@ -133,6 +123,9 @@ Recipe files: lowercase, hyphens, `.md` extension
 ## Error Handling
 
 If COOK.md doesn't exist:
+- Suggest running `/cookbook:start` to set up the cookbook
+
+If no `cookbooks/` directory or no COOKBOOK.md files found:
 - Suggest running `/cookbook:start` to set up the cookbook
 
 If a cookbook is empty:

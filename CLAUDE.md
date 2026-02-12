@@ -30,7 +30,7 @@ flavorful/                          # Marketplace root
 
 Skills are SKILL.md files with YAML frontmatter (`name`, `description`, optional `user-invocable: false`) followed by markdown instructions that teach Claude how to perform the task.
 
-- **start** — Creates COOK.md (user profile), LIBRARY.md (cookbook index), directory structure, and a CLAUDE.md in the user's cookbook folder
+- **start** — Creates COOK.md (user profile), directory structure with COOKBOOK.md descriptions, and a CLAUDE.md in the user's cookbook folder
 - **cookbook** — Internal reference skill (not user-invocable) defining the recipe markdown format: YAML frontmatter (title, source, time, tags, dietary) + markdown body (ingredients, instructions, notes)
 - **find** — Searches recipes using grep with expanded search terms, filters by user dietary restrictions from COOK.md
 - **save** — Fetches URL, extracts recipe data, infers tags/dietary flags, formats to recipe markdown, saves to `cookbooks/recipes/`
@@ -39,8 +39,7 @@ Skills are SKILL.md files with YAML frontmatter (`name`, `description`, optional
 
 The plugin operates on files in the user's selected Cowork folder:
 - `COOK.md` — User profile (dietary restrictions, equipment, preferences)
-- `LIBRARY.md` — Registry of cookbook collections
-- `cookbooks/` — Recipe collections as markdown files
+- `cookbooks/` — Recipe collections, each with a `COOKBOOK.md` description and recipe markdown files
 
 ## Reference Docs
 

@@ -14,7 +14,6 @@ Initialize Flavorful and set up your cooking profile in the current folder.
 Check the **current working directory** (the folder the user selected) for existing setup:
 - `CLAUDE.md` — project instructions
 - `COOK.md` — user profile
-- `LIBRARY.md` — cookbook registry
 - `cookbooks/` — recipe collections
 
 ### 2. Create Directory Structure
@@ -25,7 +24,6 @@ If not already set up, create the structure in the current folder:
 [current folder]/
 ├── CLAUDE.md
 ├── COOK.md
-├── LIBRARY.md
 └── cookbooks/
     ├── recipes/
     │   └── COOKBOOK.md
@@ -45,23 +43,10 @@ This is a Flavorful cookbook folder. Your cookbook plugin skills have detailed i
 ## Structure
 
 - **COOK.md** — User profile (dietary restrictions, equipment, preferences). Read this first when helping with cooking tasks.
-- **LIBRARY.md** — Registry of cookbooks. Read this to discover what collections exist.
-- **cookbooks/** — Recipe collections. Each subfolder is a cookbook with recipe markdown files.
+- **cookbooks/** — Recipe collections. Each subfolder is a cookbook with a COOKBOOK.md description and recipe markdown files.
 ```
 
-### 4. Create LIBRARY.md
-
-```markdown
-# My Cookbooks
-
-## recipes
-All my recipes — personal creations and web imports.
-
-## ai-generated
-Recipes created by AI. Move favorites to recipes.
-```
-
-### 5. Create COOKBOOK.md Files
+### 4. Create COOKBOOK.md Files
 
 For `cookbooks/recipes/COOKBOOK.md`:
 ```markdown
@@ -77,7 +62,7 @@ For `cookbooks/ai-generated/COOKBOOK.md`:
 Recipes created by Claude. Move favorites to recipes.
 ```
 
-### 6. Gather User Context
+### 5. Gather User Context
 
 Ask the user a few quick questions to populate COOK.md:
 
@@ -93,7 +78,7 @@ Let me set up your cookbook. A few quick questions:
 
 Keep it conversational. If they say "none" or seem unsure, that's fine — the profile can be updated later.
 
-### 7. Create COOK.md
+### 6. Create COOK.md
 
 Based on their answers, create COOK.md:
 
@@ -135,7 +120,7 @@ Cooking profile — update as needed.
 Standard kitchen setup
 ```
 
-### 8. Confirm Setup
+### 7. Confirm Setup
 
 ```
 Your cookbook is ready!
