@@ -22,47 +22,23 @@ If not already set up, create the structure in the current folder:
 
 ```
 [current folder]/
-├── CLAUDE.md
-├── COOK.md
-└── cookbooks/
-    ├── recipes/
-    │   └── COOKBOOK.md
-    └── ai-generated/
-        └── COOKBOOK.md
+├── cookbooks/
+│   ├── recipes/
+│   └── ai-generated/
 ```
 
-### 3. Create CLAUDE.md
+### 3. Copy Template Files
 
-Create a `CLAUDE.md` file in the **current working directory root**:
+Read and copy the bundled templates to their destinations:
 
-```markdown
-# Flavorful Cookbook
+| Template file | Destination |
+|---|---|
+| [templates/CLAUDE.md](templates/CLAUDE.md) | `./CLAUDE.md` |
+| [templates/recipes-COOKBOOK.md](templates/recipes-COOKBOOK.md) | `./cookbooks/recipes/COOKBOOK.md` |
+| [templates/ai-generated-COOKBOOK.md](templates/ai-generated-COOKBOOK.md) | `./cookbooks/ai-generated/COOKBOOK.md` |
+| [templates/COOK.md](templates/COOK.md) | `./COOK.md` |
 
-This is a Flavorful cookbook folder. Your cookbook plugin skills have detailed instructions for working with these files — lean on them.
-
-## Structure
-
-- **COOK.md** — User profile (dietary restrictions, equipment, preferences). Read this first when helping with cooking tasks.
-- **cookbooks/** — Recipe collections. Each subfolder is a cookbook with a COOKBOOK.md description and recipe markdown files.
-```
-
-### 4. Create COOKBOOK.md Files
-
-For `cookbooks/recipes/COOKBOOK.md`:
-```markdown
-# My Recipes
-
-Personal recipes, adaptations, and web imports.
-```
-
-For `cookbooks/ai-generated/COOKBOOK.md`:
-```markdown
-# AI-Generated Recipes
-
-Recipes created by Claude. Move favorites to recipes.
-```
-
-### 5. Gather User Context
+### 4. Gather User Context
 
 Ask the user a few quick questions to populate COOK.md:
 
@@ -78,49 +54,11 @@ Let me set up your cookbook. A few quick questions:
 
 Keep it conversational. If they say "none" or seem unsure, that's fine — the profile can be updated later.
 
-### 6. Create COOK.md
+### 5. Update COOK.md
 
-Based on their answers, create COOK.md:
+Based on their answers, update the COOK.md that was copied in step 3. Fill in their name, dietary info, equipment, and any interests mentioned. If they didn't provide much info, leave the defaults from the template.
 
-```markdown
-# About Me
-
-[Name], cooking for [X]. [Skill level if mentioned].
-Weeknight max: [time].
-
-## Dietary
-
-- Restrictions: [list or "none"]
-- Preferences: [list or "none"]
-- Avoid: [list or "none"]
-
-## Equipment
-
-[comma-separated list]
-
-## Current Interests
-
-- [anything they mentioned wanting to learn/try]
-```
-
-If they didn't provide much info, keep it minimal:
-
-```markdown
-# About Me
-
-Cooking profile — update as needed.
-
-## Dietary
-
-- Restrictions: none noted
-- Preferences: none noted
-
-## Equipment
-
-Standard kitchen setup
-```
-
-### 7. Confirm Setup
+### 6. Confirm Setup
 
 ```
 Your cookbook is ready!
