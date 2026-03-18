@@ -7,10 +7,16 @@ description: "Search the user's Flavorful recipe collection by ingredients, cuis
 
 Search across all your cookbooks for recipes matching a query.
 
+## Cookbook Path Resolution
+
+1. Check Claude's memory (userMemories) for a saved cookbook path
+2. If no path is found, ask the user where their cookbook lives and save it to memory using `memory_user_edits`
+3. If the user says the path has changed, update the memory entry
+
 ## First-Run Check
 
 Before proceeding, verify the cookbook is initialized:
-1. Check if `COOK.md` exists in current folder
+1. Check if `COOK.md` exists at the cookbook path
 2. If missing, inform user and suggest starting setup:
 
    "Your cookbook isn't set up yet. Would you like me to initialize it first?"
@@ -41,7 +47,7 @@ The command supports natural language queries. Parse the intent:
 
 ### 1. Load User Context
 
-Read `COOK.md` (in current folder) to understand:
+Read `COOK.md` (at the cookbook path) to understand:
 - Dietary restrictions (filter out incompatible recipes)
 - Preferences (rank matching recipes higher)
 - Time constraints (default weeknight limit)
@@ -67,6 +73,8 @@ Before searching, expand the query to related terms. This improves recall. For e
 ### 3. Search with Grep (Programmatic)
 
 **Do NOT load all recipes into context.** Use grep to find matches efficiently.
+
+All grep paths below are relative to the resolved cookbook path.
 
 **Search pattern for ingredients/title:**
 ```bash

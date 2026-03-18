@@ -7,10 +7,16 @@ description: "Import a recipe from a URL or save a recipe to the user's Flavorfu
 
 Import a recipe from a website and save it to your cookbook.
 
+## Cookbook Path Resolution
+
+1. Check Claude's memory (userMemories) for a saved cookbook path
+2. If no path is found, ask the user where their cookbook lives and save it to memory using `memory_user_edits`
+3. If the user says the path has changed, update the memory entry
+
 ## First-Run Check
 
 Before proceeding, verify the cookbook is initialized:
-1. Check if `COOK.md` exists in current folder
+1. Check if `COOK.md` exists at the cookbook path
 2. If missing, inform user and suggest starting setup:
 
    "Your cookbook isn't set up yet. Would you like me to initialize it first?"

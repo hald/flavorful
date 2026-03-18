@@ -5,29 +5,36 @@ description: "Initialize a new Flavorful cookbook with the required file structu
 
 # Start
 
-Initialize Flavorful and set up your cooking profile in the current folder.
+Initialize Flavorful and set up your cooking profile.
 
 ## Instructions
 
-### 1. Check What Exists
+### 1. Determine Cookbook Path
 
-Check the **current working directory** (the folder the user selected) for existing setup:
+Check Claude's memory (userMemories) for a saved cookbook path.
+- If found, use that path.
+- If not found, ask the user where they'd like their cookbook folder to live (suggest `~/Documents/cookbook` as a default).
+- Save the chosen path to memory using `memory_user_edits` so it persists across conversations.
+
+### 2. Check What Exists
+
+Check the cookbook path for existing setup:
 - `CLAUDE.md` — project instructions
 - `COOK.md` — user profile
 - `cookbooks/` — recipe collections
 
-### 2. Create Directory Structure
+### 3. Create Directory Structure
 
-If not already set up, create the structure in the current folder:
+If not already set up, create the structure in the cookbook folder:
 
 ```
-[current folder]/
+[cookbook path]/
 ├── cookbooks/
 │   ├── recipes/
 │   └── ai-generated/
 ```
 
-### 3. Copy Template Files
+### 4. Copy Template Files
 
 Read and copy the bundled templates to their destinations:
 
@@ -38,7 +45,7 @@ Read and copy the bundled templates to their destinations:
 | [templates/ai-generated-COOKBOOK.md](templates/ai-generated-COOKBOOK.md) | `./cookbooks/ai-generated/COOKBOOK.md` |
 | [templates/COOK.md](templates/COOK.md) | `./COOK.md` |
 
-### 4. Gather User Context
+### 5. Gather User Context
 
 Ask the user a few quick questions to populate COOK.md:
 
@@ -54,11 +61,11 @@ Let me set up your cookbook. A few quick questions:
 
 Keep it conversational. If they say "none" or seem unsure, that's fine — the profile can be updated later.
 
-### 5. Update COOK.md
+### 6. Update COOK.md
 
-Based on their answers, update the COOK.md that was copied in step 3. Fill in their name, dietary info, equipment, and any interests mentioned. If they didn't provide much info, leave the defaults from the template.
+Based on their answers, update the COOK.md that was copied in step 4. Fill in their name, dietary info, equipment, and any interests mentioned. If they didn't provide much info, leave the defaults from the template.
 
-### 6. Confirm Setup
+### 7. Confirm Setup
 
 ```
 Your cookbook is ready!

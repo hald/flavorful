@@ -16,12 +16,21 @@ A simple, markdown-based format for cooking knowledge:
 - **Recipe files** — minimal YAML frontmatter + markdown body
 - **Cookbook descriptions** (COOKBOOK.md per collection) — what each cookbook is for
 
+## Cookbook Path Resolution
+
+The user's cookbook path is stored in Claude's memory (userMemories).
+
+**Resolution order:**
+1. Check userMemories for a saved cookbook path
+2. If no path is found, ask the user where their cookbook lives and save it to memory using `memory_user_edits`
+3. If the user says the path has changed, update the memory entry
+
+All file paths below are relative to the resolved cookbook path.
+
 ## File Locations
 
-Files live in the **user's selected folder** (the current working directory). Structure:
-
 ```
-[user's folder]/
+[cookbook path]/
 ├── COOK.md               # User profile
 └── cookbooks/
     ├── recipes/          # All user recipes
@@ -29,8 +38,6 @@ Files live in the **user's selected folder** (the current working directory). St
     └── ai-generated/     # Created by AI
         └── COOKBOOK.md    # Collection description
 ```
-
-**Important:** Do NOT use hardcoded paths. Work with whatever folder the user has selected.
 
 ## Reading User Context
 
